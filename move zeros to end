@@ -1,0 +1,15 @@
+// move zeros to end
+class Solution {
+public:
+    void moveZeroes(vector<int>& nums) {
+        // TC : O(n)
+        // SC : O(1)
+        int j=0;
+        for(int i=0;i<nums.size();i++){
+            if (nums[i]!=0){
+                swap(nums[i], nums[j]);
+                j++;
+            }
+        }
+    }
+};
