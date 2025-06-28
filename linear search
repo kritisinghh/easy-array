@@ -1,0 +1,16 @@
+// linear search
+#include <iostream>
+using namespace std;
+
+int search(vector<int> &arr,int n,int num)
+{
+    // TC : O(n)
+    // SC : O(1)
+    int i;
+    for(i=0;i<n;i++)
+    {
+        if(arr[i]==num)
+        return i;
+    }
+    return -1;
+}
