@@ -1,0 +1,17 @@
+// maximum findMaxConsecutiveOnes
+class Solution {
+public:
+    int findMaxConsecutiveOnes(vector<int>& nums) {
+        // TC : O(n)
+        // SC : O(1)
+        int c=0, m=0;
+        for(int num:nums){
+            if (num==1) c++;
+            else{
+                m=max(m, c);
+                c=0;
+            }
+        }
+        return max(m, c);
+    }
+};
