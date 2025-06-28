@@ -1,0 +1,27 @@
+// find number appearing once and other twice
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+        /*
+        // TC : O(n)
+        // SC : O(n)
+        unordered_map<int, int> m;
+        for(int num:nums){
+            m[num]++;
+        }
+        for(auto i:m){
+            if (i.second==1) return i.first;
+        }
+        return -1;
+        */
+        
+        // TC : O(n)
+        // SC : O(1)
+        int n=nums.size();
+        int xor1=0;
+        for(int i=0;i<n;i++){
+            xor1=xor1^nums[i];
+        }
+        return xor1;
+    }
+};
